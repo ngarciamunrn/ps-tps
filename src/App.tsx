@@ -252,7 +252,7 @@ function App() {
         const { error } = await authClient.auth.signInWithOAuth({
             provider: 'google',
             options: {
-                redirectTo: window.location.origin,
+                redirectTo: `${window.location.origin}${window.location.pathname}`,
             },
         })
 
