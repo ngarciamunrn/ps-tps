@@ -1,0 +1,36 @@
+{
+    "name": "tp-selection-webapp",
+    "private": true,
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "npm run typecheck && vite build",
+        "typecheck": "tsc --noEmit",
+        "test": "vitest",
+        "lint": "eslint .",
+        "supabase:cli": "npx --yes supabase@2.121.0",
+        "supabase:link:authorized": "npm run supabase:cli -- link --project-ref iotmujqdemabcweqksjl",
+        "supabase:migration:list:linked": "npm run supabase:cli -- migration list --linked"
+    },
+    "dependencies": {
+        "@supabase/supabase-js": "^2.57.4",
+        "react": "^19.1.1",
+        "react-dom": "^19.1.1"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@testing-library/jest-dom": "^7.0.1",
+        "@testing-library/react": "^16.3.3",
+        "@types/react": "^19.1.12",
+        "@types/react-dom": "^19.1.9",
+        "@vitejs/plugin-react": "^5.0.2",
+        "eslint": "^10.12.0",
+        "eslint-plugin-react-hooks": "^7.1.1",
+        "jsdom": "^30.1.2",
+        "typescript": "~5.9.2",
+        "typescript-eslint": "^8.71.2",
+        "vite": "^7.1.5",
+        "vitest": "^5.0.4"
+    }
+}
